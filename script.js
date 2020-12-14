@@ -150,7 +150,7 @@ function greetings(firstName, language){
 }
 greetings("Elsa", "French")
 greetings("Ferdinand", "Spanish")
-greetings("Amara", "English")
+greetings("Mary", "English")
 // If the person's preferred language is English, the function should print "Hello, [name]!" to the console.
 // If the person's preferred language is Spanish print "Hola, [name]!" to the console.
 // If their preferred language is French, print "Bonjour, [name]!" to the console.
@@ -159,13 +159,87 @@ greetings("Amara", "English")
 // Write a function that accepts three parameters: breadType (a string), sandwichName, and isToasted (a boolean).
 
 function mySandwich(breadType, sandwichName, isToasted){
-    // let isToasted = true
-    
+    let order = '';
+     if(isToasted){
+        order =   `You ordered a toasted ${sandwichName} on ${breadType}`
+     }else{
+         order = `You ordered a ${sandwichName} on ${breadType}`
+         
+     }
+     return order;
 }
 
+console.log(mySandwich("wheat", "The Bop", true));
+console.log(mySandwich("garlic", "Meatball", false))
+console.log(mySandwich("white", "Turkey", true))
 // The function should check whether isToasted is true or false and build a sentence about the sandwich order accordingly.
 // The function should return the sentence.
 // Call the function three times, passing in three different sets of parameters.
 // Example console output:
 
 // "You ordered a toasted meatball sub sandwich on wheat."
+
+// The Rock's Hobbies
+// Once again, we concern ourselves with our friend Dwayne:
+let dwayneObject = {
+  firstName: "Dwayne",
+  nickName: "The Rock",
+  lastName: "Johnson",
+  favoriteFood: "Eggs",
+  hobbies: ["jumping out of planes", "personally holding the  San Andreas fault together", "building incredible muscle mass"]
+}
+
+function printHobbies(hobbiesArray){
+    for(i = 0; i < hobbiesArray.length; i++)
+        console.log(hobbiesArray[i])
+}
+printHobbies(dwayneObject.hobbies)
+// The printHobbies function should loop through the array of Dwayne The Rock Johnson's hobbies and print each one to the console.
+// Call the printHobbies function.
+
+
+// New Years Eve Party
+// Copy and paste the following array into your JavaScript file:
+
+let partyGuests = [
+  {
+    name: "Sam",
+    age: 18
+  },
+  {
+    name: "Jerry",
+    age: 45
+  },
+  {
+    name: "Lila",
+    age: 29
+  },
+  {
+    name: "Mary",
+    age: 68
+  },
+  {
+    name: "Todd",
+    age: 10
+  }
+]
+
+function ageChecker(partyGuestsArray){
+  let over21Array = []
+  let under21Array = []
+
+  for(i = 0; i < partyGuestsArray.length; i++){
+      if(partyGuestsArray[i].age >= 21){
+          over21Array.push(partyGuestsArray[i].name)
+      }else{
+          under21Array.push(partyGuestsArray[i].name)
+      }
+  }
+  console.log(`${over21Array.join(', ')} can drink. ${under21Array.join(', ')}can't drink.`)
+}
+    ageChecker(partyGuests)
+// Fill in the ageChecker function so that it does the following things:
+
+// Loop through the partyGuests and check if each guest is at least 21.
+// Build a sentence or two about who can drink and who can't. (Example: " "Jery, Lila, and Mary can drink. Sam and Todd are too young.")
+// Log the sentnece to the console.
