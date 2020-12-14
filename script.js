@@ -235,7 +235,7 @@ function ageChecker(partyGuestsArray){
           under21Array.push(partyGuestsArray[i].name)
       }
   }
-  console.log(`${over21Array.join(', ')} can drink. ${under21Array.join(', ')}can't drink.`)
+  console.log(`${over21Array.join(', ')} can drink. ${under21Array.join(', ')} can't drink.`)
 }
     ageChecker(partyGuests)
 // Fill in the ageChecker function so that it does the following things:
